@@ -1,0 +1,1 @@
+String cicek='Herkese Merhaba.';

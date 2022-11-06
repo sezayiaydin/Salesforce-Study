@@ -1,0 +1,2 @@
+ListDemoFirst.candidateList();
+ListDemoFirst.randomIntegerList();

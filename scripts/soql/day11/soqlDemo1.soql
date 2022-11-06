@@ -1,0 +1,28 @@
+SELECT id, name,phone FROM Account
+select id, name, phone from account
+select id from Salesforce_Project__c
+select id, Name, Project_Name__c, Status__c from Salesforce_Project__c
+select id, Name, mailingCity from contact where mailingCity='paris'
+select id, Name, mailingCity from contact where name like '%s'
+select id, Name, Active__c, AccountNumber from Account order by name desc
+select id, Name, Active__c, AccountNumber from Account order by createddate desc
+select id, Name, Active__c, AccountNumber from Account order by createddate desc limit 3
+SELECT Id, Admin_Notes__c, Completed_Date__c, Description__c, Priority__c, Requested_by_date__c, Requester__c, Status__c, Subject__c FROM Salesforce_Ticket__c where Status__c!='' and Priority__c='High'
+select id, name, Subject__c, Status__c, Priority__c, Salesforce_Project__r.Name, Salesforce_Project__r.status__c, Salesforce_Project__r.project_name__c from Salesforce_Ticket__c
+select id, name, Subject__c, Status__c, Priority__c, Salesforce_Project__r.Name, Salesforce_Project__r.status__c, Salesforce_Project__r.project_name__c from Salesforce_Ticket__c
+SELECT Id, name,Subject__c, Status__c, Priority__c,  Admin_Notes__c, Completed_Date__c, Description__c, Requested_by_date__c, Requester__c FROM Salesforce_Ticket__c where Status__c!='' and Priority__c='High'
+select id, name, project_name__c,(select name, subject__c, priority__c from salesforce_tickets__r) from salesforce_project__c
+select id, name, industry, (select firstname, lastname, phone from contacts) from account
+select id, name, annualrevenue, type, (select id, name, amount, stagename from opportunities where stageName = 'Closed Won') from account where type = 'Customer - Direct'
+select name, count(id) from account group by name
+select name, count(id) from account group by name having count(id) > 0
+select sum(amount), stagename from opportunity where isclosed=false group by stagename
+select id, name, Subject__c, Status__c, Priority__c,Salesforce_Project__c, Salesforce_Project__r.Name, Salesforce_Project__r.status__c, Salesforce_Project__r.project_name__c from Salesforce_Ticket__c
+select id, name, annualrevenue, type, (select id, name, amount, stagename from opportunities where stageName = 'Closed Won') from account where type = 'Customer - Direct'
+select sum(amount) from opportunity where isclosed = false
+select leadsource, count(name) from lead group by leadSourc
+elect name, count(id) from account group by name having count(id) > 1
+select sum(amount) from opportunity where isclosed = false
+
+
+
