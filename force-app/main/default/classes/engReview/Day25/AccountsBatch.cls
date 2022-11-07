@@ -1,6 +1,9 @@
+//updating description of all accounts via batch class.
+//getting statistics using stateful.
+
 public class AccountsBatch implements Database.Batchable<sObject>, Database.stateful{
     integer count = 0;
-     //1. start method.
+     //1. start method. test github
      public database.QueryLocator start(Database.BatchableContext bc){
          //soql to fetch records.
          //on account records
