@@ -1,5 +1,5 @@
-public class Car99 {
-   public void switchOn(){
-      
-   }
+public with sharing class Car99 {
+    public Car99() {
+
+    }
 }

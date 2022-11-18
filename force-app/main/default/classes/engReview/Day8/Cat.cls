@@ -5,6 +5,8 @@ public class Cat {
     public Cat(string n, string clr){
         name = n;
         color = clr;
+        system.debug('catname =' + name);
+        system.debug('catcolor =' + color);
         sleeping();
     }
 
@@ -16,9 +18,3 @@ public class Cat {
         system.debug('cat constructor called.');
     }
 }
-
-
-
-
-
-

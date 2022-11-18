@@ -34,7 +34,7 @@ public class DmlDemo {
     }
 
     public static void dmlUpdateDemo3() {
-        Account acc = [Select id, name from account where name='Softinnovas' limit 1];
+        Account acc = [Select id, name from account where name='Softinnovas'];
         
 
         //update account name
