@@ -1,0 +1,2 @@
+RestCallouts.getAnimals();
+RestCallouts.getBlogs();

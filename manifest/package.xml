@@ -15,9 +15,10 @@
     <types>
         <members>Account</members>
         <members>Application_Log__c</members>
-        <members>Application_Log__c</members>
+        <members>Contact</members>
         <members>Case</members>
-        <members>Email_Domain__mdt</members>
+        <members>Loan_Application__c</members>
+        <members>Notification_Event__e</members>
         <name>CustomObject</name>
     </types>
     <types>
