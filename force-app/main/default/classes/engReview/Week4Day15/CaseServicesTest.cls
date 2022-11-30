@@ -42,6 +42,7 @@ public with sharing class CaseServicesTest {
     private static void deleteCaseTest() {
         //prepare RestRequest
         Case cs = [SELECT Id FROM Case LIMIT 1];
+        //Alttaki satır bizim url i getiriyor
         String homeUrl = System.URL.getSalesforceBaseUrl().toExternalForm();
         RestRequest request = new RestRequest();
         request.requestURI = homeUrl + '/services/apexrest/Case/' + cs.Id;

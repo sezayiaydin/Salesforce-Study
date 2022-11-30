@@ -61,7 +61,7 @@ global with sharing class CaseServices {
       String caseId = uri.substringAfterLast('/');
       Case cs = [SELECT Id FROM Case where Id =:caseId];
       delete cs;
-      return 'Case deleted successfully';
+      return 'Case has been deleted successfully!';
   }
 
     @HttpPut 
