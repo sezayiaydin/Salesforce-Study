@@ -1,4 +1,4 @@
-trigger AccountTrigger on Account (before insert, before update, after insert, after update) {
+trigger AccountTriggernew on Account (before insert, before update, after insert, after update) {
    
    Map<id, account> newAccMap = trigger.newMap;
    map<id, account> oldAccMap = trigger.oldMap;
