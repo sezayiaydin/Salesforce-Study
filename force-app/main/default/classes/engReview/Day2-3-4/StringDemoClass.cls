@@ -1,6 +1,6 @@
 public class StringDemoClass {
    public void stringMethod1(){
-    string sessionDescription = 'learning string method in apex language';
+    string sessionDescription = 'Learning string method in apex language';
 
      //1. length
     integer lengthOfStr = sessionDescription.length();
@@ -21,5 +21,18 @@ public class StringDemoClass {
     //3.a contains salesforce
     boolean containsSalesforce = sessionDescription.containsIgnoreCase('salesforce');
     system.debug('contains Salesforce?????? ' + containsSalesforce);
+
+    //trim
+    string trimdemo=sessionDescription.trim();
+    System.debug('Normal : '+sessionDescription);
+    System.debug('Trim : '+trimdemo);
+
+    //equals
+    Boolean equalDemo=sessionDescription.equals('learning string method in apex langauge');
+    System.debug('equal ? '+equalDemo );
+
+    //uncapitalize
+    String uncapitalizeDemo=sessionDescription.uncapitalize();
+    System.debug('First Capitalize small : ' + uncapitalizeDemo );
    }
 }

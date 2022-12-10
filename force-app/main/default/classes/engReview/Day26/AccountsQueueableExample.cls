@@ -1,4 +1,4 @@
-public with sharing class AccountsQueueableExample implements Queueable{
+public class AccountsQueueableExample implements Queueable{
     List<account> listAccount;
     public AccountsQueueableExample(List<account> accs) {
         listAccount = accs;
@@ -9,5 +9,6 @@ public with sharing class AccountsQueueableExample implements Queueable{
             ac.Name = ac.Name + ' -- SI';
         }
         update listAccount;
+        System.enqueueJob(new AccountsQueueableExample2(listAccount));
     }
 }

@@ -56,7 +56,7 @@ public class AccountTriggerHandlerTest {
 
     }
 
-
+/*
     @istest
     private static void testVIPUpdate() {
           //1. prepare data
@@ -97,5 +97,5 @@ public class AccountTriggerHandlerTest {
             system.assertEquals(true, contacts[0].VIP__c);
 
     }
-    
+    */
 }
