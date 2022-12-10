@@ -9,7 +9,7 @@ public  class PrimitiveDataTypeDemo2 {
         system.debug('newDate2--->'+newDate2);
 
         Date todayDate=date.today();
-        system.debug('TodayDate--->'+todayDate);
+        system.debug('Today\'s Date--->'+todayDate);
         }
     public void printNewTime(){
         time mytime=time.newInstance(18, 9, 30, 25);
@@ -46,6 +46,16 @@ public  class PrimitiveDataTypeDemo2 {
 
         }
 
-   
 
-  }
+}
+
+
+// public void printmyTimeZone(){
+//     TimeZone tz=user.getTimeZone();
+//     Datetime dt=Datetime.now();
+
+//     System.debug('Actual Time as String : ' +dt.format());
+//     System.debug('Offset '+tz.getOffset(dt)/1000);
+//     System.debug('Formatted Time '+dt.addSeconds((tz.getOffset(dt)/1000)));
+
+// }

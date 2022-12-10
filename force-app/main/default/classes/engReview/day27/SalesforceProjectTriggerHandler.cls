@@ -2,10 +2,15 @@ public class SalesforceProjectTriggerHandler {
     public static void createDefaultTicket(List<Salesforce_Project__c> spTriggerNew) {
         try{
             List<Salesforce_Ticket__c> listST = new List<Salesforce_Ticket__c>();
+            DefaultTicketInfo__c dt = DefaultTicketInfo__c.getOrgDefaults();
+
             for (salesforce_project__c eachSP : spTriggerNew) {
                 Salesforce_Ticket__c st = new Salesforce_Ticket__c();
-                st.Subject__c = 'Default ST';
+                st.Subject__c = dt.Subject__c;
+                st.Description__c = dt.Description__c;
                 st.Salesforce_Project__c = eachSP.id;
+                st.Priority__c = 'Medium';
+
                 listST.add(st);
             }
             if (!listST.isEmpty()) {

@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="ACCOUNT VIEW FORM">
+        <lightning-record-view-form
+        object-api-name={objectName}
+        record-id={recordId}>
+            <lightning-output-field field-name={fields.name}></lightning-output-field>
+            <lightning-output-field field-name={fields.type}></lightning-output-field>
+            <lightning-output-field field-name={fields.revenue}></lightning-output-field>
+            <lightning-output-field field-name={fields.industry}></lightning-output-field>
+            <lightning-output-field field-name={fields.rating}></lightning-output-field>
+            <lightning-output-field field-name={fields.phone}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

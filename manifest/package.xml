@@ -13,6 +13,16 @@
         <name>ApexPage</name>
     </types>
     <types>
+        <members>Account</members>
+        <members>Application_Log__c</members>
+        <members>Contact</members>
+        <members>Case</members>
+         <members>Blog__c</members>
+        <members>Loan_Application__c</members>
+        <members>Notification_Event__e</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
         <members>*</members>
         <name>ApexTestSuite</name>
     </types>

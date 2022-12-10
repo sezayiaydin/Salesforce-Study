@@ -1,0 +1,17 @@
+<!-- 
+Create a case form - Account Name, Contact Name, Subject, Description, Priority, Type
+Show a success message upon successful record creation
+Display error messages if applicable -->
+<template>
+    <lightning-card title="LIGHTNING RECORD FORM" icon-name="standard:case">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectName}
+                fields={fields}
+                columns="2"
+                onsuccess={successHandler}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
