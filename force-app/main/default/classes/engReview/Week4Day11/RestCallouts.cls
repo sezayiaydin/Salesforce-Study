@@ -159,4 +159,60 @@ public with sharing class RestCallouts {
 
     // }
 
+    public static HttpResponse postGorestContact() {
+        
+        // //1. Prepare HttpRequest and wrap the necessary information in it
+        // HttpRequest request = new HttpRequest();
+        // request.setMethod('POST');
+        // request.setEndpoint('https://gorest.co.in/public/v2/users');
+        // //1.1 Get the gorest contact records and prepare them into json string
+        // List<Gorest_Contact__c> contacts = [SELECT Name, Email__c, Gender__c, Status__c FROM Gorest_Contact__c LIMIT 2];
+        // List<GorestContactWrapper> wrappers = new List<GorestContactWrapper>();
+        // for(Gorest_Contact__c con : contacts) {
+        //     GorestContactWrapper wrap = new GorestContactWrapper();
+        //     wrap.name = con.Name;
+        //     wrap.email = con.Email__c;
+        //     wrap.gender = con.Gender__c;
+        //     wrap.status = con.Status__c;
+        //     wrappers.add(wrap);
+        // }
+        // String jsonString = JSON.serialize(wrappers);
+        // System.debug(jsonString);
+        // request.setBody(jsonString);
+        // request.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        // request.setHeader('Authorization', 'Bearer 70e1f461fd475135683473e734663791d988ca49336b3a1002405be2ff00ed29');
+        
+        //1. Prepare HttpRequest and wrap the necessary information in it
+        HttpRequest request = new HttpRequest();
+        request.setMethod('POST');
+        request.setEndpoint('https://gorest.co.in/public/v2/users');
+        //1.1 Get the gorest contact records and prepare them into json string
+        Gorest_Contact__c con = [SELECT Name, Email__c, Gender__c, Status__c FROM Gorest_Contact__c LIMIT 1];
+            GorestContactWrapper wrap = new GorestContactWrapper();
+            wrap.name = con.Name;
+            wrap.email = con.Email__c;
+            wrap.gender = con.Gender__c;
+            wrap.status = con.Status__c;
+        String jsonString = JSON.serialize(wrap);
+        System.debug(jsonString);
+        request.setBody(jsonString);
+        request.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        request.setHeader('Authorization', 'Bearer 70e1f461fd475135683473e734663791d988ca49336b3a1002405be2ff00ed29');
+    
+        //2. Prepare internet
+        Http http = new Http();
+    
+        //3. Send the request over the internet to receive response
+        HttpResponse response = http.send(request);
+        System.debug(response);
+        System.debug(response.getBody());
+    
+        //4. Process the response
+        if(response.getStatusCode() == 201) {
+            System.debug('records have been created successfully!');
+        }
+        return response;
+    }
+    
+
 }
