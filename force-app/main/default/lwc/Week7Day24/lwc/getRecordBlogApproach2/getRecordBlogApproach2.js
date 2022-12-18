@@ -10,7 +10,7 @@ import TOPIC_FIELD from '@salesforce/schema/Blog__c.Topic__c';
 const FIELDS = [AUTHOR_FIELD, NAME_FIELD, BODY_FIELD, TITLE_FIELD, TOPIC_FIELD];
 
 export default class GetRecordBlog extends LightningElement {
-    recordId = "a025h00000hCLySAAW";
+    recordId = "a084x00000BkI1cAAF";
     author;
     name;
     body;
