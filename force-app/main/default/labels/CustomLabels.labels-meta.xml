@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Big_Opportunity_Won_Description</fullName>
+        <categories>Flow- &quot;Opportunity - After Insert/ Update&quot;</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Big Opportunity Won Description</shortDescription>
+        <value>Success! We have won a big deal!</value>
+    </labels>
+    <labels>
+        <fullName>Biotecnology_Description</fullName>
+        <categories>Flow - Account Auto Launched Flow</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Biotecnology_Description</shortDescription>
+        <value>This account belongs to biotecnology industry</value>
+    </labels>
+    <labels>
+        <fullName>ContactValidation2</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ContactValidation2</shortDescription>
+        <value>Cannot update  Leadsource Please  go away</value>
+    </labels>
+    <labels>
+        <fullName>New_Customer_Discription</fullName>
+        <categories>Flow- &quot;Opportunity - Before Insert&quot;</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New Customer Discription</shortDescription>
+        <value>This is a new customer. Make sure we deal them well.</value>
+    </labels>
+</CustomLabels>
