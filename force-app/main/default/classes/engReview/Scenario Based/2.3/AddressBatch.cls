@@ -41,7 +41,7 @@ public with sharing class AddressBatch implements Database.Batchable<SObject>, D
         //Send an email
         List<Messaging.SingleEmailMessage> msgs= new List<Messaging.SingleEmailMessage>();
         Messaging.SingleEmailMessage msg=new Messaging.SingleEmailMessage();
-        List<String> toAddresses=new List<String>{'salesdevelopernew@gmail.com'};
+        List<String> toAddresses=new List<String>{'salesdeveloper@gmail.com'};
         msg.setToAddresses(toAddresses);
         msg.setSubject('Address Batch Completed');
         msg.setPlainTextBody('Address Batch Apex has been completed. The records processed are: '+recordsProcessed);
