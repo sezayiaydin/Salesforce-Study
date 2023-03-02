@@ -106,7 +106,7 @@ public with sharing class AirlinessCallouts {
         HttpRequest request = new HttpRequest();
         request.setMethod('PATCH');
         request.setEndpoint('https://api.instantwebtools.net/v1/passenger/'+psg.PassengerId__c);
-        String jsonString='{"Name":"Joee Doee"}';
+        String jsonString='{"name":"Joee Doee"}';
         request.setBody(jsonString);
         request.setHeader('Content-Type', 'application/json');
 
