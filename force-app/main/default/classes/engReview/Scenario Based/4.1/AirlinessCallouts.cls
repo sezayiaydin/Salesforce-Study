@@ -12,8 +12,8 @@ public with sharing class AirlinessCallouts {
   
           //3. Send the request over the internet in order to receive response back
           HttpResponse response = http.send(request);
-        //   System.debug(response);
-        //   System.debug(response.getBody());
+          System.debug(response);
+          System.debug(response.getBody());
   
           //4. Process the response
         if (response.getStatusCode()==200) {
