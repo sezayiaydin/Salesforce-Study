@@ -42,7 +42,7 @@ public with sharing class AccountHandler {
             try {
                 insert opps;
             } catch (Exception Ex) {
-                //create a log                
+                //create a log               
             }
         }
 
