@@ -1,3 +1,4 @@
+//Bagli hesaplarda amount hesaplama insert update delete undelete
 public with sharing class PaymentTriggerHandler {
     
     public static void updateAmountOnPaymentInsert(List<Payments__c> triggerNew){
